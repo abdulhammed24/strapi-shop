@@ -1,10 +1,17 @@
 import React from "react";
+import Categories from "../components/Categories";
+import Contact from "../components/Contact";
+import FeaturedProducts from "../components/FeaturedProducts";
 import Slider from "../components/Slider";
 
 const Home = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Slider />
+      <FeaturedProducts type={"featured"} />
+      <Categories />
+      <FeaturedProducts type={"trending"} />
+      <Contact />
     </div>
   );
 };

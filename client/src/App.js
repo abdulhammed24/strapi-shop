@@ -7,7 +7,7 @@ import Products from "./pages/Products";
 
 const Layout = () => {
   return (
-    <div className="app">
+    <div>
       <Navbar />
       <Outlet />
       <Footer />

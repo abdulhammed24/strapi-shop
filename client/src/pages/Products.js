@@ -41,7 +41,7 @@ const Products = () => {
               // onChange={handleChange}
             />
             {/* <label className="mb-3" htmlFor={item.id}> */}
-            <label className="mb-3">
+            <label className="ml-2">
               {/* {item.attributes.title} */}
               title
             </label>
@@ -71,7 +71,7 @@ const Products = () => {
               name="price"
               onChange={(e) => setSort("asc")}
             />
-            <label className="mb-3" htmlFor="asc">
+            <label className="ml-2" htmlFor="asc">
               Price (Lowest first)
             </label>
           </div>
@@ -83,7 +83,7 @@ const Products = () => {
               name="price"
               onChange={(e) => setSort("desc")}
             />
-            <label className="mb-3" htmlFor="desc">
+            <label className="ml-2" htmlFor="desc">
               Price (Highest first)
             </label>
           </div>
@@ -95,11 +95,8 @@ const Products = () => {
           src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
           alt=""
         />
-        <List />
-        {/* catId={catId}
-          maxPrice={maxPrice}
-          sort={sort}
-          subCats={selectedSubCats}
+        <List catId={catId} maxPrice={maxPrice} sort={sort} />
+        {/* subCats={selectedSubCats}
         /> */}
       </div>
     </div>

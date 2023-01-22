@@ -5,9 +5,10 @@ import { MdFavoriteBorder, MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { Link } from "react-router-dom";
 // import Cart from "../Cart/Cart";
 import { useSelector } from "react-redux";
+import Cart from "./Cart";
 
 const Navbar = () => {
-  // const [open,setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
   // const products = useSelector((state) => state.cart.products);
 
   return (
@@ -68,8 +69,7 @@ const Navbar = () => {
             <GrSearch size={20} />
             <BiUser size={20} />
             <MdFavoriteBorder size={20} />
-            {/* <div className="cartIcon" onClick={()=>setOpen(!open)}> */}
-            <div className="relative">
+            <div className="relative" onClick={() => setOpen(!open)}>
               <GrCart size={20} />
               <span className="text-base w-5 h-5 rounded-[50%] bg-orange-600 text-white absolute -right-2 -top-2 flex items-center justify-center">
                 0
@@ -79,7 +79,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {/* {open && <Cart/>} */}
+      {open && <Cart />}
     </div>
   );
 };

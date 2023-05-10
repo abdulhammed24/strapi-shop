@@ -28,7 +28,7 @@ const Products = () => {
     );
   };
 
-  // console.log(selectedSubCats)
+  // console.log(selectedSubCats);
 
   return (
     <div className="py-[30px] px-[50px] flex">

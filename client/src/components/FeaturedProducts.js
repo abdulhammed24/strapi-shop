@@ -1,32 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
-// import useFetch from "../hooks/useFetch";
-import axios from "axios";
+import useFetch from "../hooks/useFetch";
 
 const FeaturedProducts = ({ type }) => {
-  // const { data, loading, error } = useFetch(`/products`);
-
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(
-          process.env.REACT_APP_API_URL +
-            `/products?populate=*&filters[type][$eq]=${type}`
-          // process.env.REACT_APP_API_URL + "/products",
-          // "http://localhost:1337/api/products?populate=*"
-        );
-
-        console.log(res.data.data);
-        // console.log(res);
-        setData(res.data.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchData();
-  }, []);
+  const { data, loading, error } = useFetch(
+    `/products?populate=*&filters[type][$eq]=${type}`
+  );
 
   return (
     <div className="my-[100px] mx-[200px]">
@@ -41,16 +20,11 @@ const FeaturedProducts = ({ type }) => {
         </p>
       </div>
       <div className="flex justify-center gap-[50px]">
-        {
-          // error
-          // ? "Something went wrong!"
-          // : loading
-          // ? "loading"
-          // :
-          data?.map((item) => (
-            <Card item={item} key={item.id} />
-          ))
-        }
+        {error
+          ? "Something went wrong!"
+          : loading
+          ? "loading"
+          : data?.map((item) => <Card item={item} key={item.id} />)}
       </div>
     </div>
   );

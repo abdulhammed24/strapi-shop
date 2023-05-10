@@ -2,55 +2,51 @@ import React from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import List from "../components/List";
-import useFetch from "../hooks/useFetch";
+// import useFetch from "../../hooks/useFetch";
 
 const Products = () => {
-  const { id } = useParams();
-  // console.log(id);
+  const catId = parseInt(useParams().id);
+  console.log(catId);
   const [maxPrice, setMaxPrice] = useState(1000);
   const [sort, setSort] = useState(null);
   const [selectedSubCats, setSelectedSubCats] = useState([]);
 
-  const { data } = useFetch(
-    `/sub-categories?[filters][categories][id][$eq]=${id}`
-  );
-
-  // console.log(data);
+  // const { data, loading, error } = useFetch(
+  //   `/sub-categories?[filters][categories][id][$eq]=${catId}`
+  // );
 
   const handleChange = (e) => {
     const value = e.target.value;
     const isChecked = e.target.checked;
 
-    setSelectedSubCats(
-      isChecked
-        ? [...selectedSubCats, value]
-        : selectedSubCats.filter((item) => item !== value)
-    );
+    //   setSelectedSubCats(
+    //     isChecked
+    //       ? [...selectedSubCats, value]
+    //       : selectedSubCats.filter((item) => item !== value)
+    //   );
   };
-
-  console.log(selectedSubCats);
 
   return (
     <div className="py-[30px] px-[50px] flex">
       <div className="flex-1 sticky h-full top-[50px]">
         <div className="mb-[30px]">
           <h2 className="mb-5">Product Categories</h2>
-          {data?.map((item) => (
-            <div className="mb-3" key={item.id}>
-              {/* <div className="mb-3"> */}
-              <input
-                type="checkbox"
-                id={item.id}
-                value={item.id}
-                onChange={handleChange}
-              />
-              <label className="ml-3" htmlFor={item.id}>
-                {/* <label className="ml-2"> */}
-                {item?.attributes?.title}
-                {/* title */}
-              </label>
-            </div>
-          ))}
+          {/* {data?.map((item) => ( */}
+          {/* <div className="mb-3" key={item.id}> */}
+          <div className="mb-3">
+            <input
+              type="checkbox"
+              // id={item.id}
+              // value={item.id}
+              // onChange={handleChange}
+            />
+            {/* <label className="mb-3" htmlFor={item.id}> */}
+            <label className="ml-2">
+              {/* {item.attributes.title} */}
+              title
+            </label>
+          </div>
+          {/* ))} */}
         </div>
         <div className="mb-[30px]">
           <h2>Filter by price</h2>
@@ -99,12 +95,9 @@ const Products = () => {
           src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
           alt=""
         />
-        <List
-          catId={id}
-          maxPrice={maxPrice}
-          sort={sort}
-          subCats={selectedSubCats}
-        />
+        <List catId={catId} maxPrice={maxPrice} sort={sort} />
+        {/* subCats={selectedSubCats}
+        /> */}
       </div>
     </div>
   );

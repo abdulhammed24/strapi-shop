@@ -36,7 +36,7 @@ const Cart = () => {
 
   return (
     <div className="absolute right-5 top-20 z-50 bg-white p-5 shadow-[0px_0px_7px_-5px_#000]">
-      <h1 className="mb-7 text-gray-300 text-2xl font-normal">
+      <h1 className="mb-7 text-[#919090] text-2xl font-normal">
         Products in your cart
       </h1>
       {/* {products?.map((item) => ( */}
@@ -51,10 +51,10 @@ const Cart = () => {
         <div className="details">
           <h1 className="text-lg font-medium">title</h1>
           {/* <h1 className="text-lg font-medium">{item.title}</h1> */}
-          <p className="text-gray-300 mb-3 text-sm">
+          <p className="text-[#919090] mb-3 text-sm">
             {/* {item.desc?.substring(0, 100)} */} lorem ipsum dolor sit amet
           </p>
-          <div className="text-orange-500">
+          <div className="text-[#0000ff]">
             {/* {item.quantity} x ${item.price} */}
           </div>
         </div>

@@ -4,16 +4,16 @@ import { MdFacebook } from "react-icons/md";
 
 const Contact = () => {
   return (
-    <div className="bg-orange-700 text-white p-4 flex justify-center">
-      <div className="w-1/2 flex items-center justify-between">
-        <span>BE IN TOUCH WITH US:</span>
-        <div className="mail">
+    <div className="bg-[#0000ff] text-white p-4 flex justify-center">
+      <div className=" flex gap-5 items-center justify-between">
+        <span className="text-base font-semibold">BE IN TOUCH WITH US:</span>
+        <div className="h-12 flex justify-center items-center">
           <input
-            className="p-[10px] rounded-tl-[5px] rounded-bl-[5px]"
+            className="p-[10px] rounded-tl-[5px] rounded-bl-[5px] h-12"
             type="text"
             placeholder="Enter your e-mail..."
           />
-          <button className="p-[10px] text-white bg-[#333] rounded-tr-[5px] rounded-br-[5px] ">
+          <button className="p-[10px] text-white h-12 text-sm font-semibold bg-[#800080] rounded-tr-[5px] rounded-br-[5px] ">
             JOIN US
           </button>
         </div>

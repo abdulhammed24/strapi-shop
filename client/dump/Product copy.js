@@ -68,7 +68,7 @@ const Product = () => {
         </div>
         <div className="flex-1 flex flex-col gap-8">
           <h1>{/* {data?.attributes?.title} */} Title </h1>
-          <span className="text-3xl text-orange-500 font-normal">
+          <span className="text-3xl text-[#0000ff] font-normal">
             {/* ${data?.attributes?.price} */} $20
           </span>
           <p className="text-sm text-justify font-normal">
@@ -93,7 +93,7 @@ const Product = () => {
             </button>
           </div>
           <button
-            className="w-[250px] p-2 bg-orange-500 text-white flex items-center justify-center gap-5 cursor-pointer font-medium"
+            className="w-[250px] p-2 bg-[#0000ff] text-white flex items-center justify-center gap-5 cursor-pointer font-medium"
             // onClick={() =>
             //   dispatch(
             //     addToCart({
@@ -110,10 +110,10 @@ const Product = () => {
             <GrCart size={20} /> ADD TO CART
           </button>
           <div className="flex gap-5">
-            <div className="flex items-center gap-2 text-orange-500 text-sm">
+            <div className="flex items-center gap-2 text-[#0000ff] text-sm">
               <MdFavoriteBorder size={20} /> ADD TO WISH LIST
             </div>
-            <div className="flex items-center gap-2 text-orange-500 text-sm">
+            <div className="flex items-center gap-2 text-[#0000ff] text-sm">
               <FaBalanceScaleRight size={20} /> ADD TO COMPARE
             </div>
           </div>
@@ -122,12 +122,12 @@ const Product = () => {
             <span>Product Type: T-Shirt</span>
             <span>Tag: T-Shirt, Women, Top</span>
           </div>
-          <hr className="border border-solid border-gray-300" />
+          <hr className="border border-solid border-[#919090]" />
           <div className="flex flex-col gap-2 text-gray-500 text-sm mt-8">
             <span>DESCRIPTION</span>
-            <hr className="border border-solid border-gray-300 w-[200px]" />
+            <hr className="border border-solid border-[#919090] w-[200px]" />
             <span>ADDITIONAL INFORMATION</span>
-            <hr className="border border-solid border-gray-300 w-[200px]" />
+            <hr className="border border-solid border-[#919090] w-[200px]" />
             <span>FAQ</span>
           </div>
         </div>

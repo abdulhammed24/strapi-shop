@@ -1,5 +1,5 @@
 import React from "react";
-import { MdDeleteOutline } from "react-icons/md";
+import { FaTrash } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart, resetCart } from "../redux-rtk/cartReducer";
 import { makeRequest } from "../makeRequest";
@@ -37,7 +37,7 @@ const Cart = () => {
 
   return (
     <div className="absolute right-5 top-20 z-50 bg-white p-5 shadow-[0px_0px_7px_-5px_#000]">
-      <h1 className="mb-7 text-gray-300 text-2xl font-normal">
+      <h1 className="mb-7 text-[#919090] text-lg font-semibold">
         Products in your cart
       </h1>
       {products?.map((item) => (
@@ -48,33 +48,33 @@ const Cart = () => {
             alt=""
           />
           <div className="details">
-            <h1 className="text-lg font-medium">{item?.title}</h1>
-            <p className="text-gray-300 mb-3 text-sm">
+            <h1 className="text-lg font-semibold">{item?.title}</h1>
+            <p className="text-[#919090] mb-3 text-sm">
               {item?.desc?.substring(0, 100)}
             </p>
-            <div className="text-orange-500">
+            <div className="text-[#0000ff]">
               {item?.quantity} x ${item?.price}
             </div>
           </div>
-          <MdDeleteOutline
+          <FaTrash
             size={20}
-            className="text-red-700 text-3xl cursor-pointer"
+            className="text-[#ff0000] text-2xl cursor-pointer"
             onClick={() => dispatch(removeFromCart(item.id))}
           />
         </div>
       ))}
-      <div className="flex justify-between font-medium text-lg mb-5">
+      <div className="flex justify-between  text-sm font-semibold mb-5">
         <span>SUBTOTAL</span>
         <span>${totalPrice()}</span>
       </div>
       <button
-        className="w-[250px] p-3 flex items-center justify-center gap-5 cursor-pointer border-none bg-orange-600 text-white font-normal mb-5"
+        className="w-[250px] p-3 text-sm flex items-center justify-center gap-5 cursor-pointer border-none bg-[#0000ff] text-white font-semibold mb-5"
         onClick={handlePayment}
       >
         PROCEED TO CHECKOUT
       </button>
       <span
-        className="text-red-700 text-xs cursor-pointer"
+        className="text-[#ff0000] text-sm font-semibold cursor-pointer"
         onClick={() => dispatch(resetCart())}
       >
         Reset Cart

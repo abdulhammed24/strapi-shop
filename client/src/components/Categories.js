@@ -11,7 +11,7 @@ const Categories = () => {
             alt="strapi-shop"
             className="w-full h-full object-cover"
           />
-          <button className="absolute min-w-[100px] w-fit h-[50px] p-[10px] top-0 bottom-0 left-0 right-0 m-auto cursor-pointer bg-white uppercase font-medium">
+          <button className="absolute min-w-[100px] w-fit h-[50px] p-[10px] top-0 bottom-0 left-0 right-0 m-auto cursor-pointer bg-white uppercase font-semibold text-sm">
             <Link className="w-full contents" to="/products/1">
               Sale
             </Link>
@@ -23,7 +23,7 @@ const Categories = () => {
             alt="strapi-shop"
             className="w-full h-full object-cover"
           />
-          <button className="absolute min-w-[100px] w-fit h-[50px] p-[10px] top-0 bottom-0 left-0 right-0 m-auto cursor-pointer bg-white uppercase font-medium">
+          <button className="absolute min-w-[100px] w-fit h-[50px] p-[10px] top-0 bottom-0 left-0 right-0 m-auto cursor-pointer bg-white uppercase font-semibold text-sm">
             <Link to="/products/2" className="w-full contents">
               Women
             </Link>
@@ -38,7 +38,7 @@ const Categories = () => {
             alt="strapi-shop"
             className="w-full h-full object-cover"
           />
-          <button className="absolute min-w-[100px] w-fit h-[50px] p-[10px] top-0 bottom-0 left-0 right-0 m-auto cursor-pointer bg-white uppercase font-medium">
+          <button className="absolute min-w-[100px] w-fit h-[50px] p-[10px] top-0 bottom-0 left-0 right-0 m-auto cursor-pointer bg-white uppercase font-semibold text-sm">
             <Link to="/products/1" className="w-full contents">
               New Season
             </Link>
@@ -54,7 +54,7 @@ const Categories = () => {
                 alt="strapi-shop"
                 className="w-full h-full object-cover"
               />
-              <button className="absolute min-w-[100px] w-fit h-[50px] p-[10px] top-0 bottom-0 left-0 right-0 m-auto cursor-pointer bg-white uppercase font-medium">
+              <button className="absolute min-w-[100px] w-fit h-[50px] p-[10px] top-0 bottom-0 left-0 right-0 m-auto cursor-pointer bg-white uppercase font-semibold text-sm">
                 <Link to="/products/1" className="w-full contents">
                   Men
                 </Link>
@@ -69,7 +69,7 @@ const Categories = () => {
                 alt="strapi-shop"
                 className="w-full h-full object-cover"
               />
-              <button className="absolute min-w-[100px] w-fit h-[50px] p-[10px] top-0 bottom-0 left-0 right-0 m-auto cursor-pointer bg-white uppercase font-medium">
+              <button className="absolute min-w-[100px] w-fit h-[50px] p-[10px] top-0 bottom-0 left-0 right-0 m-auto cursor-pointer bg-white uppercase font-semibold text-sm">
                 <Link to="/products/1" className="w-full contents">
                   Accessories
                 </Link>
@@ -83,7 +83,7 @@ const Categories = () => {
             alt="strapi-shop"
             className="w-full h-full object-cover"
           />
-          <button className="absolute min-w-[100px] w-fit h-[50px] p-[10px] top-0 bottom-0 left-0 right-0 m-auto cursor-pointer bg-white uppercase font-medium">
+          <button className="absolute min-w-[100px] w-fit h-[50px] p-[10px] top-0 bottom-0 left-0 right-0 m-auto cursor-pointer bg-white uppercase font-semibold text-sm">
             <Link to="/products/1" className="w-full contents">
               Shoes
             </Link>

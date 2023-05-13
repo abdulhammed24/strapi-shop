@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,8 +8,14 @@
 
 
 * {
-    font-family: 'Hanken Grotesk', sans-serif;
+    font-family: 'Archivo', sans-serif;
     -webkit-tap-highlight-color: transparent;
     outline: none;
     list-style: none;
 }
+
+@layer components {
+    .container {
+        @apply z-10 w-full h-full max-w-[82rem] mx-auto px-4 sm:px-8 md:px-10
+    }
+    }

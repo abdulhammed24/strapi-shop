@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Card from "./Card";
+import Card from "../src/components/Card";
 // import useFetch from "../hooks/useFetch";
 import axios from "axios";
 

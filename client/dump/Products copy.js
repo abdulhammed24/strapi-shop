@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import List from "../components/List";
+import List from "../src/components/List";
 // import useFetch from "../../hooks/useFetch";
 
 const Products = () => {

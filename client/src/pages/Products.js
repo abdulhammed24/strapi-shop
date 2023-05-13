@@ -28,7 +28,7 @@ const Products = () => {
     );
   };
 
-  // console.log(selectedSubCats);
+  console.log(selectedSubCats);
 
   return (
     <div className="py-[30px] px-[50px] flex">
@@ -37,7 +37,6 @@ const Products = () => {
           <h2 className="mb-5">Product Categories</h2>
           {data?.map((item) => (
             <div className="mb-3" key={item.id}>
-              {/* <div className="mb-3"> */}
               <input
                 type="checkbox"
                 id={item.id}
@@ -45,9 +44,7 @@ const Products = () => {
                 onChange={handleChange}
               />
               <label className="ml-3" htmlFor={item.id}>
-                {/* <label className="ml-2"> */}
                 {item?.attributes?.title}
-                {/* title */}
               </label>
             </div>
           ))}

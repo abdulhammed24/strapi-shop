@@ -3,12 +3,13 @@ import { GrSearch, GrCart } from "react-icons/gr";
 import { BiUser } from "react-icons/bi";
 import { MdFavoriteBorder, MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { Link } from "react-router-dom";
+// import Cart from "../Cart/Cart";
 import { useSelector } from "react-redux";
-import Cart from "./Cart";
+import Cart from "../src/components/Cart";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const products = useSelector((state) => state.cart.products);
+  // const products = useSelector((state) => state.cart.products);
 
   return (
     <div className="h-[80px]">
@@ -71,8 +72,9 @@ const Navbar = () => {
             <div className="relative" onClick={() => setOpen(!open)}>
               <GrCart size={20} />
               <span className="text-base w-5 h-5 rounded-[50%] bg-orange-600 text-white absolute -right-2 -top-2 flex items-center justify-center">
-                {products.length}
+                0
               </span>
+              {/* <span>{products.length}</span> */}
             </div>
           </div>
         </div>

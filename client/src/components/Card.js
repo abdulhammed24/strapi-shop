@@ -19,6 +19,7 @@ const Card = ({ item }) => {
               process.env.REACT_APP_UPLOAD_URL +
               item?.attributes?.img?.data?.attributes?.url
             }
+            alt=""
             className="z-[1] w-full h-full object-cover absolute"
           />
           <img
@@ -27,6 +28,7 @@ const Card = ({ item }) => {
               process.env.REACT_APP_UPLOAD_URL +
               item?.attributes?.img2?.data?.attributes?.url
             }
+            alt=""
             className="group-hover:z-[2] w-full h-full object-cover absolute"
           />
         </div>

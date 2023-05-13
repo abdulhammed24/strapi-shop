@@ -4,9 +4,11 @@ import { MdFacebook } from "react-icons/md";
 
 const Contact = () => {
   return (
-    <div className="bg-[#0000ff] text-white p-4 flex justify-center">
-      <div className=" flex gap-5 items-center justify-between">
-        <span className="text-base font-semibold">BE IN TOUCH WITH US:</span>
+    <div className="bg-[#0000ff] text-white py-8 px-3 flex justify-center">
+      <div className=" flex flex-col md:flex-row gap-5 items-center justify-between">
+        <span className="text-sm md:text-base font-semibold">
+          BE IN TOUCH WITH US:
+        </span>
         <div className="h-12 flex justify-center items-center">
           <input
             className="p-[10px] rounded-tl-[5px] rounded-bl-[5px] h-12"

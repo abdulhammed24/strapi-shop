@@ -41,16 +41,16 @@ const Slider = () => {
       </div>
       <div className="w-fit flex absolute left-0 right-0 bottom-[100px] gap-[10px] m-auto">
         <div
-          className="w-[50px] h-[50px] flex items-center justify-center cursor-pointer border border-solid border-[#999]"
+          className="w-[50px] h-[50px] flex items-center justify-center cursor-pointer border border-solid border-[#fff] bg-white"
           onClick={prevSlide}
         >
-          <MdOutlineWest size={20} />
+          <MdOutlineWest size={20} color="#0000ff" />
         </div>
         <div
-          className="w-[50px] h-[50px] flex items-center justify-center cursor-pointer border border-solid border-[#999]"
+          className="w-[50px] h-[50px] flex items-center justify-center cursor-pointer border border-solid border-[#fff] bg-white"
           onClick={nextSlide}
         >
-          <MdOutlineEast size={20} />
+          <MdOutlineEast size={20} color="#0000ff" />
         </div>
       </div>
     </div>

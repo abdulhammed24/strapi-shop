@@ -33,12 +33,14 @@ const Products = () => {
   return (
     <section>
       <div className="container my-12 lg:my-[100px]">
-        <div className="py-[30px] px-[50px] flex">
-          <div className="flex-1 sticky h-full top-[50px]">
-            <div className="mb-[30px]">
-              <h2 className="mb-5">Product Categories</h2>
+        <div className="w-4/5 mx-auto flex gap-12 flex-col md:flex-row">
+          <div className="flex-1 flex flex-col  justify-center items-center md:items-start md:sticky h-full top-[50px]">
+            <div className="mb-[30px] flex flex-row gap-5 md:gap-0 flex-wrap items-center md:items-start justify-center md:flex-col">
+              <h2 className="md:mb-5 text-base font-semibold">
+                Product Categories
+              </h2>
               {data?.map((item) => (
-                <div className="mb-3" key={item.id}>
+                <div className="md:mb-3" key={item.id}>
                   <input
                     type="checkbox"
                     id={item.id}
@@ -51,9 +53,11 @@ const Products = () => {
                 </div>
               ))}
             </div>
-            <div className="mb-[30px]">
-              <h2>Filter by price</h2>
-              <div className="mb-3">
+            <div className="mb-[30px] flex flex-row gap-5 md:gap-0 flex-wrap items-center md:items-start justify-center md:flex-col">
+              <h2 className="md:mb-5 text-base font-semibold">
+                Filter by price
+              </h2>
+              <div className="md:mb-3">
                 <span>0</span>
                 <input
                   type="range"
@@ -64,9 +68,9 @@ const Products = () => {
                 <span>{maxPrice}</span>
               </div>
             </div>
-            <div className="mb-[30px]">
-              <h2>Sort by</h2>
-              <div className="mb-3">
+            <div className="mb-[30px] flex flex-row gap-5 md:gap-0 flex-wrap items-center md:items-start justify-center md:flex-col">
+              <h2 className="md:mb-5 text-base font-semibold">Sort by</h2>
+              <div className="md:mb-3">
                 <input
                   type="radio"
                   id="asc"
@@ -78,7 +82,7 @@ const Products = () => {
                   Price (Lowest first)
                 </label>
               </div>
-              <div className="mb-3">
+              <div className="md:mb-3">
                 <input
                   type="radio"
                   id="desc"

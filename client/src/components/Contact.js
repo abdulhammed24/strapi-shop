@@ -11,7 +11,7 @@ const Contact = () => {
         </span>
         <div className="h-12 flex justify-center items-center">
           <input
-            className="p-[10px] rounded-tl-[5px] rounded-bl-[5px] h-12"
+            className="p-[10px] rounded-tl-[5px] w-[70%] md:w-full rounded-bl-[5px] h-12"
             type="text"
             placeholder="Enter your e-mail..."
           />
